@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f7f7f7;
+}
+
+li,a,button{
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  text-decoration: none;
+
+}
+
+header{
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: 0.6s;
+  z-index: 100;
+  background-color: #f5f5f5;
+}
+
+header.sticky{
+  background-color: black;
+  height: 10%;
+  
+}
+
+
+
+header.sticky ul li a{
+  color: #ffff;
+}
+
+header.sticky ul li a::after{
+  background-color: #ffff;
+}
+
+header.sticky button{
+  background-color: #ffff;
+  color: black;
+}
+
+header.sticky button:hover{
+  background-color: black;
+  color: #ffff;
+  border: solid 1px;
+}
+
+
+header.sticky #logo{
+ width: 0%;
+}
+
+header.sticky #settings{
+  color: #ffff;
+  text-shadow: #000000 2px 2px 5px;
+}
+
+
+#logo{
+  width: 8%;
+}
+
+nav{
+  background-color: transparent;
+}
+.nav_links{
+  list-style: none;
+  background-color: transparent;
+
+}
+
+.nav_links li{
+  background-color: transparent;
+
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav_links li a{
+background-color: transparent;
+position: relative;
+
+}
+
+
+.nav_links li a:after {
+  content: '';
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: -10px;
+          left: 0;
+          background-color: black; /* Çizgi rengi */
+          transform: scaleX(0);
+          transform-origin: bottom right;
+          transition: transform 0.4s ease;
+
+}
+
+
+.nav_links li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+          transition: transform 0.3s ease;
+
+}
+
+
+
+
+
+.cta{
+  position: relative;
+  margin-left: auto;
+  right: 4%;
+  background-color: transparent;
+}
+
+
+
+button{
+  padding: 9px 25px;
+  background-color: black;
+  color: #ffff;
+  margin-left: 10px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Geçiş efekti */
+}
+
+button:hover{
+  background-color: rgb(227, 227, 227);
+  color: black;
+  border: solid 1px;
+}
+
+#logout{
+  position: relative;
+  right: 4%;
+}
+
+
+
+
+
+#settings{
+  position: relative;
+  right: 2%;
+  font-size: 30px;
+  text-shadow: #8f8f8f 2px 2px 5px;
+}
+
+
+.container{
+    position: relative;
+    top: 200px;
+    height: 20%;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.container img{
+    border-radius: 50px;
+    border: #000000 solid 1px;
+    box-shadow: #000000 10px 10px 15px;
+    width: 90%;
+    z-index: -1;
+    height: 100%;
+
+}
+
+.container h3{
+    position: absolute;
+    display: flex;
+    color: #ffff;
+    text-shadow: #000000 5px 5px 7px;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(1px);
+    width: 85%;
+    height: 99%;
+}
+
+
+/*SECTION*/
+
+section {
+  position: relative;
+  margin: auto;
+  margin-top: 320px;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 50px; /* İstediğiniz iç boşluk miktarını ayarlayabilirsiniz */
+}
+
+.news {
+  background-color: #ededed;
+  height: 350px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - 20px); /* Sağ ve sol kenar boşlukları düşüldü */
+}
+
+.news:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.news .img {
+  width: 100%;
+  height: 250px;
+  background-color: black;
+  overflow: hidden;
+
+}
+
+.news .img img {
+  height: 100%;
+  width: 100%;
+  object-fit:fill;
+}
+
+.news p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  margin: 20px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 7%;
+}
+
+
+/* FOOTER */ 
+
+footer{
+  width: 100%;
+  height: 300px;
+  background-color: rgb(19, 19, 19);
+  margin-top: 25%;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffff;
+  padding-top: 40px;
+}
+
+footer .footer-content,.footer-bottom,.socials,h3,p,ul,li,a,i,span{
+  background-color: transparent;
+}
+
+.footer-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-content h3{
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 3rem;
+}
+
+.footer-content p{
+max-width: 500px;
+margin: 10px auto;
+line-height: 28px;
+font-size: 14px;
+}
+
+.socials{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0 3rem 0px;
+  margin-right: 2%;
+}
+
+.socials li{
+  margin: 0 6%;
+}
+
+.socials a{
+  text-decoration: none;
+  color: rgb(227, 227, 227);
+}
+
+.socials a i{
+  font-size: 30px;
+}
+
+.socials a:hover i{
+  color: rgb(96, 96, 96);
+  transition: 0.2s;
+  transform: scale(1.20);
+}
+
+.footer-bottom{
+  background-color: black;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom p{
+font-size: 14px;
+word-spacing: 2px;
+text-transform: capitalize;
+}
+
+
+.footer-bottom span{
+  opacity: .4;
+  font-weight: 200;
+}
+
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #000000 #4f4f4f;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #4f4f4f;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 10px;
+  border: 3px solid #000000;
+}
+
+
+
+

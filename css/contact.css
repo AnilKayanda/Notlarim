@@ -1,0 +1,341 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(254, 254, 254);
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+li,a,button{
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-decoration: none;
+ 
+}
+
+
+header{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    transition: 0.6s;
+    z-index: 100;
+    background-color: #f5f5f5;
+}
+
+header.sticky{
+    background-color: black;
+    height: 10%;
+    
+}
+
+
+
+header.sticky ul li a{
+    color: #ffff;
+}
+
+header.sticky ul li a::after{
+    background-color: #ffff;
+}
+
+header.sticky button{
+    background-color: #ffff;
+    color: black;
+}
+
+header.sticky button:hover{
+    background-color: black;
+    color: #ffff;
+    border: solid 1px;
+}
+
+
+header.sticky #logo{
+   width: 0%;
+}
+
+header.sticky #settings{
+    color: #ffff;
+    text-shadow: #000000 2px 2px 5px;
+}
+
+
+#logo{
+    width: 8%;
+}
+
+nav{
+    background-color: transparent;
+}
+.nav_links{
+    list-style: none;
+    background-color: transparent;
+
+}
+
+.nav_links li{
+    background-color: transparent;
+
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a{
+  background-color: transparent;
+  position: relative;
+
+}
+
+
+.nav_links li a:after {
+    content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -10px;
+            left: 0;
+            background-color: black; /* Çizgi rengi */
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.4s ease;
+ 
+}
+
+
+.nav_links li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+            transition: transform 0.3s ease;
+ 
+}
+
+
+
+
+.cta{
+    position: relative;
+    margin-left: auto;
+    right: 5%;
+    background-color: transparent;
+
+}
+
+
+button{
+    padding: 9px 25px;
+    background-color: black;
+    color: #ffff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Geçiş efekti */
+}
+
+button:hover{
+    background-color: rgb(227, 227, 227);
+    color: black;
+    border: solid 1px;
+}
+
+
+
+#settings{
+    position: relative;
+    right: 2%;
+    font-size: 30px;
+    text-shadow: #8f8f8f 2px 2px 5px;
+}
+
+
+section {
+    position: relative;
+    margin: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #F5F7F8;
+}
+
+h2{
+    margin-bottom: 50px;
+    text-align: center;
+    right: 50px;
+    background-color: transparent;    
+}
+
+form {
+    width: 80%;
+    max-width: 400px;
+    background-color: transparent;    
+    flex-wrap: wrap;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 10px;
+    background-color: transparent;
+
+}
+
+label {
+    background-color: transparent;
+    position: relative; 
+    bottom: 45px;
+    left: 7px;
+    cursor: text;
+    transition: 0.2s;
+}
+
+
+input:focus~label,
+input:valid~label{
+    bottom: 85px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+    background-color: transparent;
+
+}
+
+
+
+
+footer{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(19, 19, 19);
+
+    font-family: 'Montserrat', sans-serif;
+    color: #ffff;
+    padding-top: 40px;
+}
+
+footer .footer-content,.footer-bottom,.socials,h3,p,ul,li,a,i,span{
+    background-color: transparent;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0px;
+    margin-right: 2%;
+}
+
+.socials li{
+    margin: 0 6%;
+}
+
+.socials a{
+    text-decoration: none;
+    color: rgb(227, 227, 227);
+}
+
+.socials a i{
+    font-size: 30px;
+}
+
+.socials a:hover i{
+    color: rgb(96, 96, 96);
+    transition: 0.2s;
+    transform: scale(1.20);
+}
+
+.footer-bottom{
+    background-color: black;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p{
+  font-size: 14px;
+  word-spacing: 2px;
+  text-transform: capitalize;
+}
+
+
+.footer-bottom span{
+    opacity: .4;
+    font-weight: 200;
+}
+
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #000000 #4f4f4f;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #4f4f4f;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 10px;
+    border: 3px solid #000000;
+  }
+
+
+
+
+
+
+
